@@ -1,7 +1,10 @@
 {
   "version": 2,
   "builds": [
-    { "src": "angular.json", "use": "@vercel/angular" }
+    {
+      "src": "dist/front-control-inventario/browser/**/*",
+      "use": "@vercel/static"
+    }
   ],
   "routes": [
     {
