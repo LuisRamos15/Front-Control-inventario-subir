@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "rewrites": [
-    { "source": "/api/:path*", "destination": "https://backend-control-inventario-desplegar.onrender.com/api/:path*" },
-    { "source": "/ws/:path*",  "destination": "https://backend-control-inventario-desplegar.onrender.com/ws/:path*" },
-    { "source": "/(.*)", "destination": "/" }
+  "builds": [
+    { "src": "angular.json", "use": "@vercel/angular" }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
